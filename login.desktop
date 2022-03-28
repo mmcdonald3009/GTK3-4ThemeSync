@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=First Run
+Comment=First Run
+Exec=/usr/share/customscripts/gtkthemesync.sh
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
