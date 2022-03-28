@@ -11,3 +11,5 @@ Not perfect but works well enough.
 This script here (you can remove it) also disables Show Hidden Files in Nautilus.
 
 At any time to stop this loop, open a terminal and # killall inotifywait
+
+You might be using a shell extension theme instead of that rather bland Activities button, you can gsettings set that too - it is show here as well.
