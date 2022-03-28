@@ -1,15 +1,18 @@
 # GTK3-4ThemeSync
-Auto Trigger gsettings set From Appearance To Sync GTK3 and GTK4 Styles
+
+Auto Trigger "gsettings set" When Changing Between Dark/Light Appearance in Gnome Settings To The Effect Sync GTK3 and GTK4 Styles
 
 Requires inotifywait to be installed.
 
-Place a .desktop file in /etc/xdg/autostart/ that calls the bash script which runs in an inotifywait loop monitoring changes in the dconf database.
+Place login.desktop file in /etc/xdg/autostart/ that calls the script which runs in an inotifywait loop monitoring changes in the dconf database.
+Put the script anywhere you like and change the Exec= path to match.
 
-Whenever changes are detected acheck is made for which GTK4 style is applied and triggers a matching gsettings set call to Adwaita.
-Not perfect but works well enough - changes Gedit, Evolution, Firefox and Chrome now as well whenever the Light or Dark Appearance switcher clicked that appears from Gnome 42 onwards.
+Whenever Appearance Light/Dark change (or anything which alters the dconf database actually) is made a gsettings get check is made for which style is applied and triggers a matching gsettings set call to Adwaita or Adwaita-dark.
 
-This script here (you can remove it) also disables Show Hidden Files in Nautilus.
+It's not perfect but it works.It changes Gedit, Evolution, Firefox and Chrome appearance now as well GTK4 apps from Gnome 42 onwards.
 
-At any time to stop this loop, open a terminal and # killall inotifywait
+This script here for example (you can remove the lines if you want ) also disables Show Hidden Files in Nautilus.
 
-You might be using a shell extension theme instead of that rather bland Activities button, you can gsettings set that too - it is show here as well.
+At any time to stop this loop, open a terminal and type # killall inotifywait
+
+You might be using a shell extension theme instead of that rather bland Activities button, you can gsettings set that too - this is show here as well.
