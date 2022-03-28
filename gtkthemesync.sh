@@ -11,7 +11,7 @@ gtktheme=$(gsettings get org.gnome.desktop.interface gtk-theme);
 if [ $colorscheme = "'prefer-dark'" ]; then
 if [ ! $gtktheme = "'Adwaita-dark'" ]; then
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
-gsettings get org.gnome.shell.extensions.user-theme name 'CustomDark'
+gsettings set org.gnome.shell.extensions.user-theme name 'CustomDark'
 fi
 fi
 
@@ -19,7 +19,7 @@ fi
 if [ $colorscheme = "'default'" ]; then
 if [ ! $gtktheme = "'Adwaita'" ]; then
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita'
-gsettings get org.gnome.shell.extensions.user-theme name 'CustomLight'
+gsettings set org.gnome.shell.extensions.user-theme name 'CustomLight'
 fi
 fi
 
