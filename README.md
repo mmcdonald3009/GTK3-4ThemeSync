@@ -2,7 +2,7 @@
 
 Auto Trigger "gsettings set" When Changing Between Dark/Light Appearance in Gnome Settings To The Effect Sync GTK3 and GTK4 Styles
 
-Requires inotifywait to be installed.
+Requires inotify-tools to be installed.
 
 Place login.desktop file in /etc/xdg/autostart/ that calls the script which runs in an inotifywait loop monitoring changes in the dconf database.
 Put the script anywhere you like and change the Exec= path to match.
